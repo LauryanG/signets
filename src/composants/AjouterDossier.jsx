@@ -27,7 +27,6 @@ export default function AjouterDossier({ouvert, gererFermer, gererAjout}) {
             onChange={e => setNom(e.target.value)}
           />
           <TextField
-            autoFocus
             margin="dense"
             id="urlCouverture"
             label="Adresse image de couverture"
