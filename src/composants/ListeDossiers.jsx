@@ -3,9 +3,11 @@ import Dossier from './Dossier';
 import { useState, useEffect } from 'react';
 import { firestore } from '../firebase';
 
-export default function ListeDossiers({etatUtilisateur}) {
-  const [dossiers, setDossiers] = useState([]);
+export default function ListeDossiers({etatUtilisateur, etatDossiers}) {
   const [utilisateur] = etatUtilisateur;
+
+  // Décomposer etatDossiers
+  const [dossiers, setDossiers] = etatDossiers;
 
   useEffect(
     () => {
